@@ -7,7 +7,7 @@ Agraman contains an algorithm that will take any word that you give it and will 
 Fork the repository and run from the bin folder to find one word anagrams of your name.
 
 
-eg. Enter the word you would like an anagram for:
+    eg. Enter the word you would like an anagram for:
 
 
     Daniel

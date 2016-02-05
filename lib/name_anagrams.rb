@@ -13,7 +13,7 @@ class Anagram
         possible_combos = combos(letters)
         anagrams = check(possible_combos)
         list_of_anagrams = convert_to_string(anagrams)
-        @output.puts "Here are your anagrams:\n #{list_of_anagrams}"
+        @output.puts "Here are your anagrams:\n#{list_of_anagrams}"
     end
 
     def split(word)
@@ -27,7 +27,7 @@ class Anagram
     def check(combos)
         real_words = []
         dictionary = Dictionary.from_file('words')
-        combos.select do |word|
+        combos.each do |word|
          if dictionary.exists?(word)
              real_words << word
          end

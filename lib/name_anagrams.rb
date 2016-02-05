@@ -9,11 +9,13 @@ class Anagram
 
     def start()
         @output.puts "\nEnter the word you would like an anagram for:"
-        letters = split(@input.gets.to_s)
+        user_input = @input.gets.chomp.to_s
+        letters = split(user_input)
         possible_combos = combos(letters)
         anagrams = check(possible_combos)
         list_of_anagrams = convert_to_string(anagrams)
-        @output.puts "Here are your anagrams:\n#{list_of_anagrams}"
+        @output.puts "Here are your anagrams for #{user_input}:" +
+        "\n#{list_of_anagrams}"
     end
 
     def split(word)
@@ -38,7 +40,7 @@ class Anagram
     def convert_to_string(array_of_words)
         result  = ""
         array_of_words.each do |word|
-            result += word.downcase
+            result += word.downcase + " "
         end
         result
     end

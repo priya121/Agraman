@@ -14,9 +14,26 @@ class Anagram
         possible_combos = combos(letters)
         anagrams = check(possible_combos)
         list_of_anagrams = convert_to_string(anagrams)
+        anagram_exists(list_of_anagrams, user_input)
 
-        @output.puts "Here are your anagrams for #{user_input}:" +
-        "\n#{list_of_anagrams}"
+        replay_game
+        @output.puts "Byeeeee"
+    end
+
+    def anagram_exists(list_of_anagrams, user_input)
+        if list_of_anagrams.length == 0
+            @output.puts "There are no anagrams for the name #{user_input} sorry :("
+        else
+        @output.puts "\n\nHere are your anagrams for #{user_input}:" +
+        "\n#{list_of_anagrams}\n"
+        end
+    end
+
+    def replay_game
+        @output.puts "\nWould you like to try another name?(Y/N)"
+        if @input.gets.chomp.to_s == "Y"
+            start
+        end
     end
 
     def split(word)

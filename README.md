@@ -8,8 +8,14 @@ Fork the repository and run from the bin folder to find one word anagrams of you
 
 
 eg. Enter the word you would like an anagram for:
+
+
     Daniel
+
+
     Here are your anagrams for Daniel:
+
+
     denial delian aldine enalid leadin
 
 

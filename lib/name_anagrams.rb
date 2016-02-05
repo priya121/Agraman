@@ -14,6 +14,7 @@ class Anagram
         possible_combos = combos(letters)
         anagrams = check(possible_combos)
         list_of_anagrams = convert_to_string(anagrams)
+
         @output.puts "Here are your anagrams for #{user_input}:" +
         "\n#{list_of_anagrams}"
     end
@@ -34,6 +35,7 @@ class Anagram
              real_words << word
          end
         end
+        real_words.delete_at(0)
         real_words.uniq
     end
 

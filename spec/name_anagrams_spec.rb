@@ -43,7 +43,7 @@ describe Anagram do
         end
 
         it 'displays list of possible anagrams of priya' do
-            letters = word.split("priya")
+            letters = word.split("daniel")
             combos = word.combos(letters)
             result = word.check(combos)
             expect(result).to eq []

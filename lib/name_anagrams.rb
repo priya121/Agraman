@@ -1,6 +1,20 @@
 require 'ruby-dictionary'
 
 class Anagram
+
+    def initialize(input, output)
+        @input = input
+        @output = output
+    end
+
+    def start()
+        letters = split(@input.gets.to_s)
+        possible_combos = combos(letters)
+        anagrams = check(possible_combos)
+        result = convert_to_string(anagrams)
+        @output.puts "Here are your anagrams:#{result}"
+    end
+
     def split(word)
         word.split(//)
     end
@@ -18,5 +32,13 @@ class Anagram
          end
         end
         real_words.uniq
+    end
+
+    def convert_to_string(array_of_words)
+        result  = ""
+        array_of_words.each do |word|
+            result += word
+        end
+        result
     end
 end
